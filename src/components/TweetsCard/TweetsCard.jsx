@@ -30,10 +30,12 @@ const TweetsCard = ({ tweets }) => {
   });
 
   return (
-    <>
-      <h1 className={styles.title}>Users Profile List</h1>
-      <ul className={styles.list}>{elements}</ul>
-    </>
+    <div className={styles.section}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Users Profile List</h1>
+        <ul className={styles.list}>{elements}</ul>
+      </div>
+    </div>
   );
 };
 

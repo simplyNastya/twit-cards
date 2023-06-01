@@ -1,3 +1,28 @@
+.section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 30px;
+
+    list-style: none;
+}
+
 .userTweetContainer {
     box-sizing: border-box;
     position: relative;
@@ -52,7 +77,7 @@
     position: absolute;
     top: 164px;
     left: 124px;
-    
+
     display: block;
     width: 59px;
     height: 59px;
