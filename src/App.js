@@ -1,11 +1,13 @@
-import TweetsCard from './components/TweetsCard/TweetsCard';
+import { store } from './redux/store';
+import { Provider } from 'react-redux';
+import TweetsPage from './pages/TweetsPage/TweetsPage';
 import './App.css';
 
 function App() {
   return (
-    <div>
-      <TweetsCard /> 
-    </div>
+    <Provider store={store}>
+      <TweetsPage />
+    </Provider>
   );
 }
 

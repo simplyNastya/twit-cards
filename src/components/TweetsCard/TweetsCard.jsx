@@ -4,25 +4,36 @@ import userPhoto from "./hansel.png";
 
 import styles from "./tweetsCard.module.css";
 
-const TweetsCard = () => {
+const TweetsCard = ({ tweets }) => {
+  const elements = tweets.map(({ avatar, followers, id, tweets, user }) => {
+    return (
+      <li key={id} className={styles.item}>
+        <div className={styles.userTweetContainer}>
+          <img src={logo} alt="Logo" className={styles.logo}></img>
+          <div className={styles.tweetBcgImage}>
+            <div className={styles.userTweetPhotoWrapper}>
+              <img
+                src={avatar}
+                alt="Profile picture"
+                className={styles.userTweetPhoto}
+              ></img>
+            </div>
+            <div className={styles.userTweetTextWrapper}>
+              <p className={styles.userTweetText}> {tweets} tweets</p>
+              <p className={styles.userTweetText}>{followers} Followers</p>
+            </div>
+            <Button />
+          </div>
+        </div>
+      </li>
+    );
+  });
+
   return (
-    <div className={styles.userTweetContainer}>
-      <img src={logo} alt="Logo" className={styles.logo}></img>
-      <div className={styles.tweetBcgImage}>
-        <div className={styles.userTweetPhotoWrapper}>
-          <img
-            src={userPhoto}
-            alt="Profile picture"
-            className={styles.userTweetPhoto}
-          ></img>
-        </div>
-        <div className={styles.userTweetTextWrapper}>
-          <p className={styles.userTweetText}> 777 tweets</p>
-          <p className={styles.userTweetText}>100,500 Followers</p>
-        </div>
-        <Button />
-      </div>
-    </div>
+    <>
+      <h1 className={styles.title}>Users Profile List</h1>
+      <ul className={styles.list}>{elements}</ul>
+    </>
   );
 };
 

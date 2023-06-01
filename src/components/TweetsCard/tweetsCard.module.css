@@ -49,11 +49,16 @@
 }
 
 .userTweetPhoto {
+    position: absolute;
+    top: 164px;
+    left: 124px;
+    
     display: block;
-    width: 62px;
-    height: 62px;
+    width: 59px;
+    height: 59px;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 50%;
 }
 
 .userTweetPhotoWrapper {
