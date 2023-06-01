@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./button.module.css";
 
-const Button = () => {
+const Button = ({ id, followers }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -13,7 +13,12 @@ const Button = () => {
     : `${styles.btn}`;
 
   return (
-    <button onClick={handleClick} className={fullClassName}>
+    <button
+      onClick={(e) => {
+        handleClick();
+      }}
+      className={fullClassName}
+    >
       {isActive ? "Following" : "Follow"}
     </button>
   );
