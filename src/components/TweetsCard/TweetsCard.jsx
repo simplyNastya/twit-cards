@@ -12,7 +12,7 @@ const TweetsCard = () => {
         <div className={styles.userTweetPhotoWrapper}>
           <img
             src={userPhoto}
-            alt="User photo"
+            alt="Profile picture"
             className={styles.userTweetPhoto}
           ></img>
         </div>
