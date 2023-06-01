@@ -6,6 +6,7 @@ import styles from "./tweetsCard.module.css";
 
 const TweetsCard = ({ tweets }) => {
   const elements = tweets.map(({ avatar, followers, id, tweets, user }) => {
+    const formattedFollowers = followers.toLocaleString();
     return (
       <li key={id} className={styles.item}>
         <div className={styles.userTweetContainer}>
@@ -20,7 +21,9 @@ const TweetsCard = ({ tweets }) => {
             </div>
             <div className={styles.userTweetTextWrapper}>
               <p className={styles.userTweetText}> {tweets} tweets</p>
-              <p className={styles.userTweetText}>{followers} Followers</p>
+              <p className={styles.userTweetText}>
+                {formattedFollowers} Followers
+              </p>
             </div>
             <Button />
           </div>
