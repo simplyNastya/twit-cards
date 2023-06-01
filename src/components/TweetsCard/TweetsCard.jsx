@@ -1,9 +1,6 @@
 import Button from "../Button/Button";
 import logo from "./logo.png";
-import bcg from "./cardBcg.png";
-import photo from "./userPhoto.jpg";
 import userPhoto from "./hansel.png";
-import frame from "./ellips.png";
 
 import styles from "./tweetsCard.module.css";
 
