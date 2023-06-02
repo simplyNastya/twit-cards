@@ -20,7 +20,7 @@ const TweetsCard = ({ avatar, followers, id, tweets, user }) => {
             <p className={styles.userTweetText}> {tweets} tweets</p>
             <p className={styles.userTweetText}>{followers} Followers</p>
           </div>
-          <Button id={id} followers={followers} />
+          <Button id={id} />
         </div>
       </div>
     </li>

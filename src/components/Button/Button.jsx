@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./button.module.css";
 
-const Button = ({ id, followers }) => {
-  const [isActive, setIsActive] = useState(false);
+const Button = ({ id }) => {
+  const [isActive, setIsActive] = useState(
+    JSON.parse(localStorage.getItem(`isActive_${id}`) || "false")
+  );
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    const newActiveState = !isActive;
+    setIsActive(newActiveState);
+    localStorage.setItem(`isActive_${id}`, newActiveState);
   };
 
   const fullClassName = isActive
@@ -13,12 +17,7 @@ const Button = ({ id, followers }) => {
     : `${styles.btn}`;
 
   return (
-    <button
-      onClick={(e) => {
-        handleClick();
-      }}
-      className={fullClassName}
-    >
+    <button onClick={handleClick} className={fullClassName}>
       {isActive ? "Following" : "Follow"}
     </button>
   );
