@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./button.module.css";
 
-const Button = ({ id }) => {
+const Button = ({ id, updateFollowersState }) => {
   const [isActive, setIsActive] = useState(
     JSON.parse(localStorage.getItem(`isActive_${id}`) || "false")
   );
@@ -10,6 +10,7 @@ const Button = ({ id }) => {
     const newActiveState = !isActive;
     setIsActive(newActiveState);
     localStorage.setItem(`isActive_${id}`, newActiveState);
+    updateFollowersState(isActive);
   };
 
   const fullClassName = isActive

@@ -14,7 +14,7 @@ export const fetchTweets = createAsyncThunk(
 )
 
 export const updateFollowers = createAsyncThunk(
-    'followers/update',
+    'tweets/update',
     async (id, { rejectWithValue }) => {
         try {
             const { data } = await updateUserFollowers(id)

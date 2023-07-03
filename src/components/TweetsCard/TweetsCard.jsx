@@ -3,7 +3,14 @@ import logo from "./logo.png";
 
 import styles from "./tweetsCard.module.css";
 
-const TweetsCard = ({ avatar, followers, id, tweets, user }) => {
+const TweetsCard = ({
+  avatar,
+  followers,
+  id,
+  tweets,
+  user,
+  updateFollowersState,
+}) => {
   return (
     <li className={styles.item}>
       <div className={styles.userTweetContainer}>
@@ -20,7 +27,7 @@ const TweetsCard = ({ avatar, followers, id, tweets, user }) => {
             <p className={styles.userTweetText}> {tweets} tweets</p>
             <p className={styles.userTweetText}>{followers} Followers</p>
           </div>
-          <Button id={id} />
+          <Button id={id} updateFollowersState={updateFollowersState} />
         </div>
       </div>
     </li>

@@ -6,7 +6,7 @@ const tweetInstance = axios.create({
 
 export const getAllTweets = () => tweetInstance('');
 
-export const updateUserFollowers = id => {
+export const updateUserFollowers = (id) => {
   return tweetInstance.put(`/${id}`);
 };
 
